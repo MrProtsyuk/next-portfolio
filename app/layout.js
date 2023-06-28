@@ -1,6 +1,9 @@
 import Navbar from './Navbar'
+import { Toaster } from 'react-hot-toast'
 import './globals.css'
 import { Karla } from 'next/font/google'
+import bg from '../public/wave-haikei.png'
+
 const karla = Karla({
     weight: '400',
     subsets: ['latin'],
@@ -16,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={karla.className}>
+        <Toaster />
         <Navbar />
         {children}
       </body>
