@@ -55,7 +55,7 @@ export default function Contact() {
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 1, duration: 1 }} className='flex m-4 ml-0 lg:ml-6 p-0'>
-                            <Link href="https://www.linkedin.com/in/markprotsyuk/" className='text-blue-700 hover:text-blue-500 hover:opacity-70 text-3xl lg:text-5xl'>
+                            <Link target='_blank' href="https://www.linkedin.com/in/markprotsyuk/" className='text-blue-700 hover:text-blue-500 hover:opacity-70 text-3xl lg:text-5xl'>
                                 <BsLinkedin />
                             </Link>
                 </motion.div>
@@ -63,7 +63,7 @@ export default function Contact() {
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 1.2, duration: 1 }} className='flex m-4 ml-0 lg:ml-6 p-0'>
-                            <Link href="https://www.instagram.com/mark.protsyuk/" className='text-pink-700 hover:text-fuchsia-700 hover:opacity-70 text-3xl lg:text-5xl'>
+                            <Link target='_blank' href="https://www.instagram.com/mark.protsyuk/" className='text-pink-700 hover:text-fuchsia-700 hover:opacity-70 text-3xl lg:text-5xl'>
                                 <BsInstagram />
                             </Link>
                 </motion.div>
@@ -71,7 +71,7 @@ export default function Contact() {
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 1.2, duration: 1 }} className='flex m-4 ml-0 lg:ml-6 p-0'>
-                            <Link href="https://github.com/MrProtsyuk" className='text-gray-700 hover:text-gray-500 hover:opacity-70 text-3xl lg:text-5xl'>
+                            <Link target='_blank' href="https://github.com/MrProtsyuk" className='text-gray-700 hover:text-gray-500 hover:opacity-70 text-3xl lg:text-5xl'>
                                 <BsGithub />
                             </Link>
                 </motion.div>
@@ -79,7 +79,7 @@ export default function Contact() {
                         initial={{ y: 100, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 1.3, duration: 1 }} className='flex m-4 ml-0 lg:ml-6 p-0'>
-                            <Link href="https://drive.google.com/file/d/1oXfDPiKDgbyA4kAFgYczAlLDJ2T1iY6P/view" className='hover:opacity-70 text-3xl lg:text-5xl'>
+                            <Link target='_blank' href="https://drive.google.com/file/d/1oXfDPiKDgbyA4kAFgYczAlLDJ2T1iY6P/view" className='hover:opacity-70 text-3xl lg:text-5xl'>
                                 <BsFileEarmarkFont />
                             </Link>
                 </motion.div>
