@@ -26,13 +26,13 @@ export default function Contact() {
         });
     };
     return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
+        <motion.div className='min-h-screen' initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
             <motion.h2
                 initial={{ y: 200, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 1 }}
-                className='text-center lg:text-left text-3xl md:text-5xl lg:text-7xl m-2 lg:ml-6 mt-4 md:mt-24'>
+                className='text-center lg:text-left text-3xl md:text-5xl lg:text-7xl m-2 lg:m-6 mt-4 md:mt-24'>
                     Lets get in touch 📨
             </motion.h2>
             <div className='flex justify-center place-content-center'>

@@ -2,7 +2,6 @@ import Navbar from './Navbar'
 import { Toaster } from 'react-hot-toast'
 import './globals.css'
 import { Karla } from 'next/font/google'
-import bg from '../public/wave-haikei.png'
 
 const karla = Karla({
     weight: '400',
