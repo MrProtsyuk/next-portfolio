@@ -11,7 +11,7 @@ export default function Contact() {
 
     const sendEmail = (e) => {
       e.preventDefault();
-  
+  npm
       emailjs.sendForm('service_zrzpjgs', 'template_fka4a3f', form.current, 'A-t-GPOsbzlJdwFAr')
           .then((result) => {
               toast('Email was sent, I will get back to you soon!', {

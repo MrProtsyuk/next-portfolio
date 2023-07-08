@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 
 const webProjects = [
     {
@@ -8,7 +9,7 @@ const webProjects = [
         desc: "A Storehouse of Childrens and Youth Ministry Curriculum Built on a 6-Year Teaching Strategy 📖",
         tech: "Nextjs, TypeScript, GraphQL, Material UI",
         page: "https://www.teachersource.life/",
-        image: "/about.jpeg",
+        image: "/teacherwol.png",
     },
     {
         name: "Typescript Chat App",
@@ -18,11 +19,11 @@ const webProjects = [
         image: "/about.jpeg",
     },
     {
-        name: "Electron Chat Terminal",
-        desc: "Making chat GPT for your desktop! 💻",
-        tech: "Electron ⚛️, ChatGPT-API",
-        page: "",
-        image: "/about.jpeg",
+        name: "Chat GPT Clone",
+        desc: "Making chat GPT for my own! 💻",
+        tech: "ReactJS, ChatGPT-API",
+        page: "https://chaty-ai.vercel.app/",
+        image: "/chat.png",
     },
 ]
 
@@ -32,7 +33,7 @@ const gameProjects = [
         desc: "Space Shooter made during a Udemy Course show casing skills in C++ programming, level design, and UX 👽",
         tech: "Unreal Engine 5, C++, and Blueprints",
         page: "https://mrprotsyuk.itch.io/space-shooter",
-        image: "/about.jpeg",
+        image: "/spaceshooterimg.png",
     },
     {
         name: "C++ 2D Platformer",
@@ -46,7 +47,7 @@ const gameProjects = [
         desc: "A little first person shooter I made based off a chat GPT prompt 🤖",
         tech: "Made with Unreal Engine 5 Blueprints",
         page: "",
-        image: "/about.jpeg",
+        image: "/robotrampage.png",
     },
 ]
 
@@ -69,14 +70,16 @@ export default function Contact() {
                     <div className="place-content-center justify-center">
                         <ul className="place-content-center justify-center">
                             {webProjects.flat().map((item) => (
-                                <li key={item.name} className="text-center text-white bg-stone-400 lg:text-black lg:bg-transparent lg:text-left w-72 m-4 p-6 md:w-[32rem] border border-transparent rounded-xl hover:text-white hover:bg-stone-400 hover:duration-500 hover:ease-in-out">
+                                <Link href={item.page} target="_blank">
+                                <motion.li initial={{ y: 200, opacity: 0}} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .6}} key={item.name} className="text-center text-white bg-blue-900 drop-shadow-2xl lg:text-left w-72 m-4 p-6 md:w-[32rem] border border-black hover:bg-blue-800 rounded-xl">
                                     <motion.h3 initial={{ y: 200, opacity: 0}} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .6}} className="text-xl md:text-2xl p-2">{item.name}</motion.h3>
                                     <motion.p initial={{ y: 200, opacity: 0}} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .7}} className="text-lg md:text-xl p-2">{item.desc}</motion.p>
                                     <motion.p initial={{ y: 200, opacity: 0}} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .8}} className="text-md md:text-lg p-2">Tech: {item.tech}</motion.p>
                                     <motion.div className="flex place-content-center justify-center" initial={{ y: 200, opacity: 0}} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .9}}>
-                                        <Image alt="image" width={200} height={200} src={item.image} />
+                                        <Image alt="image" width={200} height={200} src={item.image}/>
                                     </motion.div>
-                                </li>
+                                </motion.li>                                    
+                                </Link>
                             ))}
                         </ul>
                     </div>
@@ -87,14 +90,16 @@ export default function Contact() {
                     </div>
                     <ul>
                         {gameProjects.flat().map((item) => (
-                            <li key={item.name} className="text-center text-white bg-stone-400 lg:text-black lg:bg-transparent lg:text-left w-72 m-4 p-2 md:p-6 md:w-[32rem] border border-transparent rounded-xl hover:text-white hover:bg-stone-400 hover:duration-500 hover:ease-in-out">
+                            <Link href={item.page} target="_blank">
+                            <motion.li initial={{ y: 200, opacity: 0}} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .6}} key={item.name} className="text-center text-white bg-blue-900 drop-shadow-2xl lg:text-left w-72 m-4 p-2 md:p-6 md:w-[32rem] border border-black hover:bg-blue-800 rounded-xl">
                                 <motion.h3 initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .8}} className="text-xl md:text-2xl p-2">{item.name}</motion.h3>
                                 <motion.p initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: .9}} className="text-lg md:text-xl p-2">{item.desc}</motion.p>
                                 <motion.p initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: 1}} className="text-md md:text-lg p-2">Tech: {item.tech}</motion.p>
                                 <motion.div className="flex place-content-center justify-center" initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1}} transition={{ duration: 1, delay: 1.1}}>
                                     <Image alt="image" width={200} height={200} src={item.image} />
                                 </motion.div>
-                            </li>
+                                </motion.li>
+                            </Link>
                         ))}
                     </ul>
                 </div>
